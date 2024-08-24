@@ -1,5 +1,5 @@
-from utils import *
-
+import bookutils
+import member
 class Book:
     def __init__(self,name,author,volume,issued):
         self.name = name
@@ -9,13 +9,19 @@ class Book:
 
     def add_book(self):
         book_array = self.__dict__
-        append_dict_to_csv("./python/data/books.csv", book_array)
+        bookutils.append_dict_to_csv("./python/data/books.csv", book_array)
         print("Book Added:")
         print(f"Name: {self.name}")
         print(f"Author: {self.author}")
         print(f"Volume: {self.volume}")
         print(f"Issued: {self.issued}")
 
+    def get_all_books(self,name):
+        return bookutils.get_books()
 
-Book1 = Book("lisa","petekr",2,False)
+    def issue_book(self,name):
+        bookutils.issue_book()
+        print(f"{name} book issued")
+
+Book1 = Book("asha","peter",1,False)
 Book1.add_book()
