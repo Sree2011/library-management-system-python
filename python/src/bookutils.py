@@ -22,29 +22,32 @@ def get_books():
 
 def issue_book(name):
     books = get_books()
-    positions = np.argwhere(books == name)
-    if len(positions)>0:
-        print(positions[0][0],positions[0][1])
-        book_pos = positions[0][0]
-        books[book_pos][3] = True
-        np.savetxt('./python/data/books.csv', books, delimiter=',')
-
+    books = np.array(books, dtype=object)
+    
+    positions = np.argwhere(books[:, 0] == name)
+    
+    if len(positions) > 0:
+        try:
+            print(positions[0][0], positions[0][1])
+            book_pos = positions[0][0]
+            books[book_pos][3] = True
+            np.savetxt('./python/data/books.csv', books, delimiter=',', fmt='%s')
+            print(f"Book '{name}' has been issued.")
+        except Exception as e:
+            print("Error: ", e)
     else:
         print("Sorry, Book not found! Would you like to add that? Enter yes or no")
         option = input()
         if option.lower() == "yes":
-            print("Enter name:")
-            name = input()
+            
             print("Enter author:")
             author = input()
             print("Enter volume no:")
-            volume = int(input())
+            volume = input()
             issued = True
-            book1 = book.Book(name,author,volume,issued)
-            book1.add_book()
+            new_book = [name, author, volume, issued]
+            books = np.append(books, [new_book], axis=0)
+            np.savetxt('./python/data/books.csv', books, delimiter=',', fmt='%s')
+            print(f"Book Added:\nName: {name}\nAuthor: {author}\nVolume: {volume}\nIssued: {issued}")
         elif option.lower() == "no":
             print("Thank you!")
-
-            
-
-

@@ -20,10 +20,10 @@ class Book:
         return bookutils.get_books()
 
     def issue_book(self,name):
-        bookutils.issue_book()
+        bookutils.issue_book(name)
         print(f"{name} book issued")
 
 Book1 = Book("asha","peter",1,False)
 # Book1.add_book()
-name = "Clean Code"
+name = "C Basics"
 Book1.issue_book(name)
