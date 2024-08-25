@@ -23,7 +23,10 @@ class Book:
         bookutils.issue_book(name)
         print(f"{name} book issued")
 
+    def return_book(self,name):
+        bookutils.return_book(name)
+
 Book1 = Book("asha","peter",1,False)
 # Book1.add_book()
-name = "C Basics"
-Book1.issue_book(name)
+name = "Dotnet basics"
+Book1.return_book(name)
