@@ -24,4 +24,6 @@ class Book:
         print(f"{name} book issued")
 
 Book1 = Book("asha","peter",1,False)
-Book1.add_book()
+# Book1.add_book()
+name = "Clean Code"
+Book1.issue_book(name)
