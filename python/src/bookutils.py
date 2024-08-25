@@ -1,85 +1,39 @@
 import csv
-from gettext import find
-from turtle import position
-
 import numpy as np
 import pandas as pd
-book = [[]]
+
 def append_dict_to_csv(file_path, my_dict):
     try:
-        with open('./python/data/books.csv', 'a', newline='') as file:
-            fieldnames = ['name','author','volume','issued']
+        with open(file_path, 'a', newline='') as file:
+            fieldnames = ['name', 'author', 'volume', 'issued']
             writer = csv.DictWriter(file, fieldnames=fieldnames)
-            # Append the dictionary
             writer.writerow(my_dict)
             print(f"List appended to {file_path} successfully.")
     except Exception as e:
         print(f"Error: {e}")
 
-def get_books():
-    books = pd.read_csv("./python/data/books.csv")
-    hint = books.to_numpy(dtype=object)
-    print(hint)
-    return hint
+def get_books(file_path):
+    try:
+        books = pd.read_csv(file_path)
+        return books.to_numpy(dtype=object)
+    except Exception as e:
+        print(f"Error reading {file_path}: {e}")
+        return np.array([])
 
-
-def find_book(name):
-    books = get_books()
-    books = np.array(books, dtype=object)
+def find_book(file_path, name):
+    books = get_books(file_path)
+    if books.size == 0:
+        return pd.DataFrame(columns=["Name", "Author", "Volume", "Issued"])
     
-    positions = np.argwhere(books[:, 0] == name)
-    
-    return positions
+    books_df = pd.DataFrame(books, columns=["Name", "Author", "Volume", "Issued"])
+    name_lower = name.lower()
+    result = books_df[books_df["Name"].str.lower() == name_lower]
+    return result
 
-def issue_book(name):
-    
-    positions = find_book(name)
-    if len(positions) > 0:
-        try:
-            print(positions[0][0], positions[0][1])
-            book_pos = positions[0][0]
-            books[book_pos][3] = "Yes"
-            np.savetxt('./python/data/books.csv', books, delimiter=',', fmt='%s')
-            print(f"Book '{name}' has been issued.")
-        except Exception as e:
-            print("Error: ", e)
-    else:
-        print("Sorry, Book not found! Would you like to add that? Enter yes or no")
-        option = input()
-        if option.lower() == "yes":
-            
-            print("Enter author:")
-            author = input()
-            print("Enter volume no:")
-            volume = input()
-            issued = True
-            new_book = [name, author, volume, issued]
-            books = np.append(books, [new_book], axis=0)
-            np.savetxt('./python/data/books.csv', books, delimiter=',', fmt='%s')
-            print(f"Book Added:\nName: {name}\nAuthor: {author}\nVolume: {volume}\nIssued: {issued}")
-        elif option.lower() == "no":
-            print("Thank you!")
-
-def return_book(name):
-    # Step 1: Get the list of books
-    books = get_books()
-    
-    # Step 2: Find the book to return
-    positions = np.argwhere(books[:, 0] == name)
-    
-    if len(positions) > 0:
-        try:
-            # Step 3: Update the issued status
-            book_pos = positions[0][0]
-            books[book_pos][3] = "No"
-            print(f"Book '{name}' has been returned.")
-            
-            # Step 4: Save the updated list of books
-            np.savetxt('./python/data/books.csv', books, delimiter=',', fmt='%s')
-        except Exception as e:
-            print("Error: ", e)
-    else:
-        print("Sorry, Book not found!")
-
-
-
+def update_book_status(file_path, name, status):
+    books = np.genfromtxt(file_path, delimiter=',', dtype=str, skip_header=1)
+    name_lower = name.lower()
+    positions = np.argwhere(np.char.lower(books[:, 0]) == name_lower)
+    for pos in positions:
+        books[pos[0], 3] = status
+    np.savetxt(file_path, books, delimiter=',', fmt='%s', header='Name,Author,Volume,Issued', comments='')

@@ -1,7 +1,7 @@
 import bookutils
-import member
+
 class Book:
-    def __init__(self,name,author,volume,issued):
+    def __init__(self, name, author, volume, issued):
         self.name = name
         self.author = author
         self.volume = volume
@@ -16,17 +16,22 @@ class Book:
         print(f"Volume: {self.volume}")
         print(f"Issued: {self.issued}")
 
-    def get_all_books(self,name):
-        return bookutils.get_books()
+    def find_book(self, name):
+        result = bookutils.find_book("./python/data/books.csv", name)
+        return result
 
-    def issue_book(self,name):
-        bookutils.issue_book(name)
-        print(f"{name} book issued")
+    def get_all_books(self):
+        return bookutils.get_books("./python/data/books.csv")
 
-    def return_book(self,name):
-        bookutils.return_book(name)
+    def issue_book(self, name):
+        result = self.find_book(name)
+        if result.empty:
+            print("No books found with that name.")
+        else:
+            bookutils.update_book_status("./python/data/books.csv", name, "Yes")
+            print("Book issued: ")
+            result = self.find_book(name)
+            print(result)
 
-Book1 = Book("asha","peter",1,False)
-# Book1.add_book()
-name = "Dotnet basics"
-Book1.return_book(name)
+    def return_book(self, name):
+        bookutils.update_book_status("./python/data/books.csv", name, "No")

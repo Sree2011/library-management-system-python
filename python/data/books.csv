@@ -1,9 +1,11 @@
+Name,Author,Volume,Issued
+Introduction to Algorithms,Thomas H. Cormen,3rd,Yes
+Clean Code,Robert C. Martin,3rd,Yes
+Design Patterns,Erich Gamma,1st,Yes
+Effective Java,Joshua Bloch,3rd,Yes
+The Pragmatic Programmer,Andrew Hunt,2nd,Yes
 Artificial Intelligence: A Modern Approach,Stuart Russell,4th,No
 Python Crash Course,Eric Matthes,2nd,Yes
 Java: The Complete Reference,Herbert Schildt,11th,No
 Head First Design Patterns,Eric Freeman,2nd,Yes
-You Dont Know JS,Kyle Simpson,1st,No
-Programming Notes,sai,1st,Yes
-Programming Basics,sree,2nd,Yes
-Dotnet basics,sree,2nd,No
-C Basics,sreelu,2nd,No
+You Don’t Know JS,Kyle Simpson,1st,No
