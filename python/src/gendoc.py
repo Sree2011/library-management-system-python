@@ -5,7 +5,7 @@ import os
 project_dir = './python/src'
 
 # Path to the desired output directory
-output_dir = './python/docs'
+output_dir = './docs'
 
 # Ensure the output directory exists
 os.makedirs(output_dir, exist_ok=True)
