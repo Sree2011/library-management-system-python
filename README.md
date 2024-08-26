@@ -11,10 +11,10 @@ The Library Management System is a console-based application designed to manage 
 # File structure
 
 This python project contains files for a basic library management system.
-Console output for the user (Please run this) -- [main.py](./python/docs/main.html)
+Console output for the user (Please run this) -- [main.py](./main.md)
 
 ## Book Management
 
-Defining a class for all books like a blueprint -- [book.py](./python/docs/book.html)
-Defining some utility functions for books -- [bookutils.py](./python/docs/bookutils.html)
+Defining a class for all books like a blueprint -- [book.py](./book.md)
+Defining some utility functions for books -- [bookutils.py](./python/d)
 

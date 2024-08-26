@@ -1,11 +1,12 @@
 import pydoc
 import os
+import html2text
 
 # Path to your project directory
-project_dir = './python/src'
+project_dir = './python/src/'
 
 # Path to the desired output directory
-output_dir = './python/docs'
+output_dir = './'
 
 # Ensure the output directory exists
 os.makedirs(output_dir, exist_ok=True)
@@ -19,10 +20,12 @@ for root, dirs, files in os.walk(project_dir):
             
             # Generate HTML documentation
             html_doc = pydoc.HTMLDoc().docmodule(__import__(module_name))
-            
+            # Convert HTML to Markdown
+            markdown_doc = html2text.html2text(html_doc)
+
             # Write to the specified path
             output_file = os.path.join(output_dir, f'{module_name}.html')
             with open(output_file, 'w') as f:
-                f.write(html_doc)
+                 f.write(markdown_doc)
 
 print(f"Documentation generated in {output_dir}.")
