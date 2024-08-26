@@ -4,7 +4,17 @@
 The Library Management System is a console-based application designed to manage the operations of a library. It allows users to manage books and members, track the issue and return of books, and calculate fines for overdue books. This project is implemented in three different programming languages: C, Java, and Python.
 
 ## Features
-- **Book Management:** Add, delete, update, and search for books.
+- **Book Management:** Add, search for, issue and return books.
 - **Member Management:** Add, delete, update, and search for members.
-- **Issue/Return Books:** Track the issue and return of books.
+
+
+# File structure
+
+This python project contains files for a basic library management system.
+Console output for the user (Please run this) -- [main.py](./python/src/main.py)
+
+## Book Management
+
+Defining a class for all books like a blueprint -- [book.py](./python/src/book.py)
+Defining some utility functions for books -- [bookutils.py](./python/src/bookutils.py)
 

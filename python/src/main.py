@@ -1,10 +1,22 @@
-# Import required dependencies
+'''
+This is the user output for the
+library management system project
+'''
 import book
 import pandas as pd
 import numpy as np
 
+# Generate documentation
+import pydoc
+
 def main():
-    # Display welcome information to the user
+    '''
+    Params: none
+    Returns: none
+
+    Display welcome information to the user and
+    do the operation based on the user's preference
+    '''
     print("Hi! Welcome to our Library Management System!")
     name_user = input("What should we call you? ")
     print(f"Hello, {name_user}")
@@ -28,8 +40,16 @@ def main():
     else:
         print("Invalid option. Please try again.")
 
-# Add a book to the library
+
 def add_book():
+    '''
+    Params: none
+    Returns: none
+
+    Take the details of the book from the user as input
+    and add them to the library file.
+    '''
+
     # Get the details from the user
     print("Enter the details of the book you want to add:")
     name_book = input("Enter name: ").capitalize()
@@ -45,6 +65,13 @@ def add_book():
 
 # Get all the books present in the library
 def list_books():
+
+    '''
+    Params: none
+    Returns: A pandas dataframe of the list of books in the library
+
+    Lists all the books available in the library.
+    '''
     # Create a object of Book class from book.py to activate functions
     sample_book = book.Book("nn", "88", "4th", "Yes")
 
@@ -67,6 +94,14 @@ def list_books():
     return list_books
 
 def issue_book():
+
+    '''
+    Params: none
+    Returns: none
+
+    Takes the name of the book from the user as input
+    and issue it to the user by updating issued status to 'yes'.
+    '''
 
     # Get the list of all books and print
     df = list_books()
@@ -93,6 +128,14 @@ def issue_book():
         sample_book.issue_book(name)
 
 def return_book():
+
+    '''
+    Params: none
+    Returns: none
+
+    Takes the name of the book from the user as input
+    and returns it to the library by updating issued status to 'no'.
+    '''
     df = list_books()
     name = input("Enter the name of the book you want to return: ").capitalize()
     result = df[df["Name"].str.lower() == name.lower()]
@@ -109,3 +152,4 @@ def return_book():
 
 if __name__ == "__main__":
     main()
+
