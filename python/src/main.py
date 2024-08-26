@@ -56,8 +56,19 @@ def issue_book():
         sample_book.issue_book(name)
 
 def return_book():
-    # Implement the return book functionality here
-    pass
+    df = list_books()
+    name = input("Enter the name of the book you want to return: ").capitalize()
+    result = df[df["Name"].str.lower() == name.lower()]
+    
+    if result.empty:
+        print("No books found with that name.")
+    else:
+        print("Books found:")
+        print(result)
+        # Assuming issue_book method updates the book's issued status
+        sample_book = book.Book(result.iloc[0]["Name"], result.iloc[0]["Author"], result.iloc[0]["Volume"], result.iloc[0]["Issued"])
+        sample_book.return_book(name)
+
 
 if __name__ == "__main__":
     main()

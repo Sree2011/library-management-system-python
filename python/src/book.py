@@ -35,3 +35,6 @@ class Book:
 
     def return_book(self, name):
         bookutils.update_book_status("./python/data/books.csv", name, "No")
+        print("Book returned:")
+        result = self.find_book(name)
+        print(result)
