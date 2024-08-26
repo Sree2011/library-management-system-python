@@ -1,60 +1,114 @@
-  
-**book** | [index](.)  
-[c:\users\reliance\documents\github\library-management-
-system\python\src\book.py](file:c%3A%5Cusers%5Creliance%5Cdocuments%5Cgithub%5Clibrary-
-management-system%5Cpython%5Csrc%5Cbook.py)  
----|---  
-  
-  
-**Modules**  
----  
-      |   | | [bookutils](bookutils.html)  
-| | |   
----|---|---|---  
-  
-  
-**Classes**  
----  
-      |   | 
+<!-- markdownlint-disable -->
 
-[builtins.object](builtins.html#object)
+<a href=".\book#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
-    
+# <kbd>module</kbd> `book`
 
-[Book](book.html#Book)
 
-|  
-class **Book**([builtins.object](builtins.html#object))  
----  
-    | Book(name, author, volume, issued)  
-  
-  
-  
-  | Methods defined here:  
 
-**__init__**(self, name, author, volume, issued)
 
-    Initialize self.  See help(type(self)) for accurate signature.
+**Global Variables**
+---------------
+- **bookutils**
 
-**add_book**(self)
 
-**find_book**(self, name)
+---
 
-**get_all_books**(self)
+<a href=".\book\Book#L3"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
-**issue_book**(self, name)
+## <kbd>class</kbd> `Book`
 
-**return_book**(self, name)
 
-* * *
 
-Data descriptors defined here:  
 
-**__dict__**
+<a href=".\book\__init__#L4"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
-    dictionary for instance variables
+### <kbd>method</kbd> `Book.__init__`
 
-**__weakref__**
+```python
+__init__(name, author, volume, issued)
+```
 
-    list of weak references to the object
 
+
+
+
+
+
+
+---
+
+<a href=".\book\add_book#L10"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+
+### <kbd>method</kbd> `Book.add_book`
+
+```python
+add_book()
+```
+
+
+
+
+
+---
+
+<a href=".\book\find_book#L19"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+
+### <kbd>method</kbd> `Book.find_book`
+
+```python
+find_book(name)
+```
+
+
+
+
+
+---
+
+<a href=".\book\get_all_books#L23"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+
+### <kbd>method</kbd> `Book.get_all_books`
+
+```python
+get_all_books()
+```
+
+
+
+
+
+---
+
+<a href=".\book\issue_book#L26"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+
+### <kbd>method</kbd> `Book.issue_book`
+
+```python
+issue_book(name)
+```
+
+
+
+
+
+---
+
+<a href=".\book\return_book#L36"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+
+### <kbd>method</kbd> `Book.return_book`
+
+```python
+return_book(name)
+```
+
+
+
+
+
+
+
+
+---
+
+_This file was automatically generated via [lazydocs](https://github.com/ml-tooling/lazydocs)._
