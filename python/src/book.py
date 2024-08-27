@@ -2,19 +2,28 @@
 Book Module
 
 This module provides functionalities to manage a library system, including book management, tracking the issue and return of books, and updating book statuses.
+Modules:
+
+    bookutils: 
+        Utility functions for handling book data operations such as appending to CSV, finding books, and updating book status.
 
 Classes:
-    Book: Represents a book in the library and provides methods to add, find, issue, and return books.
+
+    Book: 
+        Represents a book in the library and provides methods to add, find, issue, and return books.
 
 Functions:
-    add_book(): Adds a new book to the library.
-    find_book(name): Finds a book by its title.
-    get_all_books(): Retrieves a list of all books in the library.
-    issue_book(name): Issues a book and updates its status to "Yes".
-    return_book(name): Returns a book and updates its status to "No".
+    add_book(): 
+        Adds a new book to the library.
+    find_book(name): 
+        Finds a book by its title.
+    get_all_books(): 
+        Retrieves a list of all books in the library.
+    issue_book(name): 
+        Issues a book and updates its status to "Yes".
+    return_book(name): 
+        Returns a book and updates its status to "No".
 
-Modules:
-    bookutils: Utility functions for handling book data operations such as appending to CSV, finding books, and updating book status.
 """
 import bookutils
 
