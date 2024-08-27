@@ -5,6 +5,10 @@ on:
     branches:
       - main  # or the branch you want to trigger the action on
 
+permissions:
+  id-token: write
+  contents: read
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -25,7 +29,6 @@ jobs:
       - name: Generate documentation
         run: |
           python python/src/gendoc.py
-
 
       - name: Add untracked files
         run: |
