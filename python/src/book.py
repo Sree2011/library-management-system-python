@@ -13,14 +13,19 @@ Classes:
         Represents a book in the library and provides methods to add, find, issue, and return books.
 
 Functions:
+
     add_book(): 
         Adds a new book to the library.
+
     find_book(name): 
         Finds a book by its title.
+
     get_all_books(): 
         Retrieves a list of all books in the library.
+
     issue_book(name): 
         Issues a book and updates its status to "Yes".
+        
     return_book(name): 
         Returns a book and updates its status to "No".
 
