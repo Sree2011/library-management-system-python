@@ -69,13 +69,13 @@ Gets the list of all books in the library
 
 **Parameters:**
  
- - <b>`file_path`</b> (str):  File path of the CSV file 
+ - <b>`file_path(str) `</b>:  File path of the CSV file 
 
 
 
 **Returns:**
  
- - <b>`result`</b> (numpy.ndarray):  A numpy array containing the details of all books 
+ - <b>`result(numpy.ndarray) `</b>:  A numpy array containing the details of all books 
 
 
 ---
