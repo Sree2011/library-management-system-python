@@ -63,10 +63,10 @@ def get_books(file_path):
     Gets the list of all books in the library
 
     Parameters:
-        file_path(str): File path of the CSV file
+        file_path(str) : File path of the CSV file
 
     Returns:
-        result(numpy.ndarray): A numpy array containing the details of all books
+        result(numpy.ndarray) : A numpy array containing the details of all books
 
     """
     try:
