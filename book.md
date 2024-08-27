@@ -13,7 +13,17 @@ Classes:
 
  Book:   Represents a book in the library and provides methods to add, find, issue, and return books. 
 
-Functions:  add_book():   Adds a new book to the library.  find_book(name):   Finds a book by its title.  get_all_books():   Retrieves a list of all books in the library.  issue_book(name):   Issues a book and updates its status to "Yes".  return_book(name):   Returns a book and updates its status to "No". 
+Functions: 
+
+ add_book():   Adds a new book to the library. 
+
+ find_book(name):   Finds a book by its title. 
+
+ get_all_books():   Retrieves a list of all books in the library. 
+
+ issue_book(name):   Issues a book and updates its status to "Yes".  
+
+ return_book(name):   Returns a book and updates its status to "No". 
 
 **Global Variables**
 ---------------
@@ -22,14 +32,14 @@ Functions:  add_book():   Adds a new book to the library.  find_book(name):   Fi
 
 ---
 
-<a href="./python/src/book.py#L32"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="./python/src/book.py#L37"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>class</kbd> `Book`
 
 
 
 
-<a href="./python/src/book.py#L34"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="./python/src/book.py#L39"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `Book.__init__`
 
@@ -59,7 +69,7 @@ Creates the object of the Book class.
 
 ---
 
-<a href="./python/src/book.py#L55"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="./python/src/book.py#L60"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `Book.add_book`
 
@@ -85,7 +95,7 @@ This method takes the book's attributes and appends them to a CSV file,  effecti
 
 ---
 
-<a href="./python/src/book.py#L76"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="./python/src/book.py#L81"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `Book.find_book`
 
@@ -109,7 +119,7 @@ Finds the book by name from the library
 
 ---
 
-<a href="./python/src/book.py#L91"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="./python/src/book.py#L96"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `Book.get_all_books`
 
@@ -132,7 +142,7 @@ Gets the list of all books from the library
 
 ---
 
-<a href="./python/src/book.py#L104"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="./python/src/book.py#L109"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `Book.issue_book`
 
@@ -154,7 +164,7 @@ Issues the book and updates the "issued" column to "Yes"
 
 ---
 
-<a href="./python/src/book.py#L124"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="./python/src/book.py#L129"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `Book.return_book`
 
