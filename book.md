@@ -29,24 +29,29 @@
 __init__(name, author, volume, issued)
 ```
 
-Creates the object of book class 
+Creates the object of the Book class. 
 
-Parameters 
----------- 
 
-name : str  The title of the book. author : str  The author of the book. volume : str  The volume number of the book. issued : str  Issued status of the book. 
 
+**Args:**
  
+ - <b>`name`</b> (str):  The title of the book. 
+ - <b>`author`</b> (str):  The author of the book. 
+ - <b>`volume`</b> (str):  The volume number of the book. 
+ - <b>`issued`</b> (str):  Issued status of the book. 
 
-Returns 
-------- Book  An object of the book class. 
+
+
+**Returns:**
+ 
+ - <b>`Book`</b>:  An object of the Book class. 
 
 
 
 
 ---
 
-<a href=".\book\add_book#L36"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href=".\book\add_book#L29"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `Book.add_book`
 
@@ -68,7 +73,7 @@ Returns
 
 ---
 
-<a href=".\book\find_book#L62"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href=".\book\find_book#L55"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `Book.find_book`
 
@@ -90,7 +95,7 @@ Returns
 
 ---
 
-<a href=".\book\get_all_books#L83"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href=".\book\get_all_books#L76"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `Book.get_all_books`
 
@@ -110,7 +115,7 @@ Returns
 
 ---
 
-<a href=".\book\issue_book#L100"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href=".\book\issue_book#L93"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `Book.issue_book`
 
@@ -123,7 +128,7 @@ Issues the book and updates the "issued" column to "Yes"
 Parameters 
 ---------- 
 
-name : str  The title of the book  
+name : str  The title of the book 
 
 
 
@@ -132,7 +137,7 @@ Returns
 
 ---
 
-<a href=".\book\return_book#L125"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href=".\book\return_book#L118"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `Book.return_book`
 

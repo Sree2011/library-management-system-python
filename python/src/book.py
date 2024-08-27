@@ -6,28 +6,21 @@ Implement a book class to perform operations on the books.
 class Book:
 
     def __init__(self, name, author, volume, issued):
-        """
-    Creates the object of book class
-
-    Parameters
-    ----------
-
-    name : str
-        The title of the book.
-    author : str
-        The author of the book.
-    volume : str
-        The volume number of the book.
-    issued : str
-        Issued status of the book.
-
         
-    Returns
-    -------
-    Book
-        An object of the book class.
-    
+        """
+    Creates the object of the Book class.
+
+    Args:
+        name (str): The title of the book.
+        author (str): The author of the book.
+        volume (str): The volume number of the book.
+        issued (str): Issued status of the book.
+
+    Returns:
+        Book: An object of the Book class.
     """
+    
+    
         self.name = name
         self.author = author
         self.volume = volume
@@ -106,7 +99,7 @@ class Book:
 
         name : str
             The title of the book
-            
+
 
         Returns
         -------
