@@ -1,5 +1,3 @@
-import bookutils
-
 """
 Book Module
 
@@ -18,6 +16,9 @@ Functions:
 Modules:
     bookutils: Utility functions for handling book data operations such as appending to CSV, finding books, and updating book status.
 """
+import bookutils
+
+
 
 class Book:
 
