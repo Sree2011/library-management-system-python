@@ -1,6 +1,6 @@
 <!-- markdownlint-disable -->
 
-<a href=".\bookutils#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="./python/src/bookutils.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 # <kbd>module</kbd> `bookutils`
 
@@ -10,7 +10,7 @@
 
 ---
 
-<a href=".\bookutils\append_dict_to_csv#L5"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="./python/src/bookutils.py#L5"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `append_dict_to_csv`
 
@@ -25,7 +25,7 @@ append_dict_to_csv(file_path, my_dict)
 
 ---
 
-<a href=".\bookutils\get_books#L15"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="./python/src/bookutils.py#L15"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `get_books`
 
@@ -40,7 +40,7 @@ get_books(file_path)
 
 ---
 
-<a href=".\bookutils\find_book#L23"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="./python/src/bookutils.py#L23"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `find_book`
 
@@ -55,7 +55,7 @@ find_book(file_path, name)
 
 ---
 
-<a href=".\bookutils\update_book_status#L33"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="./python/src/bookutils.py#L33"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `update_book_status`
 
