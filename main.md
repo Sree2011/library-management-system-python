@@ -40,14 +40,20 @@ Functions:
 main()
 ```
 
-Params: none Returns: none 
-
 Display welcome information to the user and do the operation based on the user's preference 
+
+
+
+**Parameters:**
+  None 
+
+**Returns:**
+  None 
 
 
 ---
 
-<a href="./python/src/main.py#L76"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="./python/src/main.py#L80"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `add_book`
 
@@ -68,7 +74,7 @@ Take the details of the book from the user as input and add them to the library 
 
 ---
 
-<a href="./python/src/main.py#L102"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="./python/src/main.py#L106"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `list_books`
 
@@ -78,12 +84,19 @@ list_books()
 
 Lists all the books available in the library. 
 
-Params: none Returns: A pandas dataframe of the list of books in the library 
+
+
+**Parameters:**
+  None 
+
+**Returns:**
+ 
+ - <b>`list_books(pandas.DataFrame) `</b>:  A pandas dataframe of the list of books in the library 
 
 
 ---
 
-<a href="./python/src/main.py#L133"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="./python/src/main.py#L139"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `issue_book`
 
@@ -91,14 +104,20 @@ Params: none Returns: A pandas dataframe of the list of books in the library
 issue_book()
 ```
 
-Params: none Returns: none 
-
 Takes the name of the book from the user as input and issue it to the user by updating issued status to 'yes'. 
+
+
+
+**Parameters:**
+  None 
+
+**Returns:**
+  None 
 
 
 ---
 
-<a href="./python/src/main.py#L167"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="./python/src/main.py#L176"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `return_book`
 
@@ -106,9 +125,15 @@ Takes the name of the book from the user as input and issue it to the user by up
 return_book()
 ```
 
-Params: none Returns: none 
-
 Takes the name of the book from the user as input and returns it to the library by updating issued status to 'no'. 
+
+
+
+**Parameters:**
+  None 
+
+**Returns:**
+  None 
 
 
 
