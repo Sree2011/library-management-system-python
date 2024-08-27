@@ -14,14 +14,14 @@
 
 ---
 
-<a href=".\book\Book#L6"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href=".\book\Book#L22"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>class</kbd> `Book`
 
 
 
 
-<a href=".\book\__init__#L8"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href=".\book\__init__#L24"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `Book.__init__`
 
@@ -33,7 +33,7 @@ Creates the object of the Book class.
 
 
 
-**Args:**
+**Parameters:**
  
  - <b>`name`</b> (str):  The title of the book. 
  - <b>`author`</b> (str):  The author of the book. 
@@ -51,7 +51,7 @@ Creates the object of the Book class.
 
 ---
 
-<a href=".\book\add_book#L29"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href=".\book\add_book#L45"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `Book.add_book`
 
@@ -59,21 +59,25 @@ Creates the object of the Book class.
 add_book()
 ```
 
-Add a new book to the library. 
+Adds the book into the library 
 
-Parameters 
----------- name : str  The title of the book. 
-
+This method takes the book's attributes and appends them to a CSV file,  effectively adding the book to the library's records. 
 
 
- 
 
-Returns 
-------- bool  True if the book was added successfully, False otherwise. 
+**Parameters:**
+  None 
+
+
+
+**Returns:**
+  None      
+
+
 
 ---
 
-<a href=".\book\find_book#L55"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href=".\book\find_book#L66"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `Book.find_book`
 
@@ -83,19 +87,21 @@ find_book(name)
 
 Finds the book by name from the library 
 
-Parameters 
----------- 
 
-name : str  The title of the book 
 
+**Parameters:**
  
+ - <b>`name`</b> (str):  The title of the book to be found 
 
-Returns 
-------- result : A pandas DataFrame   A dataframe containing all fields of the book found 
+
+
+**Returns:**
+ 
+ - <b>`result`</b> (pandas.DataFrame):  A pandas dataframe containing the details of the book 
 
 ---
 
-<a href=".\book\get_all_books#L76"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href=".\book\get_all_books#L81"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `Book.get_all_books`
 
@@ -105,17 +111,20 @@ get_all_books()
 
 Gets the list of all books from the library 
 
-Parameters 
----------- None 
+
+
+**Parameters:**
+  none 
 
 
 
-Returns 
-------- result : A pandas DataFrame  A dataframe containing all fields of all the books in the library 
+**Returns:**
+ 
+ - <b>`result`</b> (pandas.DataFrame):  A pandas DataFrame containing the details of all books 
 
 ---
 
-<a href=".\book\issue_book#L93"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href=".\book\issue_book#L94"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `Book.issue_book`
 
@@ -125,19 +134,9 @@ issue_book(name)
 
 Issues the book and updates the "issued" column to "Yes" 
 
-Parameters 
----------- 
-
-name : str  The title of the book 
-
-
-
-Returns 
-------- None 
-
 ---
 
-<a href=".\book\return_book#L118"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href=".\book\return_book#L110"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `Book.return_book`
 
