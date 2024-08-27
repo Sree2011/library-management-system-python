@@ -33,4 +33,4 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./docs  # path to your generated docs
         publish_branch: gh-pages  # branch to publish to
-        destination_dir: /  # publish to the root folder
+        
