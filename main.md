@@ -3,12 +3,36 @@
 <a href="./python/src/main.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 # <kbd>module</kbd> `main`
-This is the user output for the library management system project 
+Main Module 
+
+This module provides an interactive interface to the user 
+
+Modules: 
+
+ book:   functionalities to manage a library system, including book management, tracking the issue and return of books, and updating book statuses  
+
+ pandas:  Python library for data visualisation  
+
+ numpy:  Python library for data analysis 
+
+
+
+Functions: 
+
+ add_book():   Adds a new book to the library. 
+
+ find_book(name):   Finds a book by its title. 
+
+ list_books():   Retrieves a list of all books in the library. 
+
+ issue_book(name):   Issues a book and updates its status to "Yes".  
+
+ return_book(name):   Returns a book and updates its status to "No". 
 
 
 ---
 
-<a href="./python/src/main.py#L12"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="./python/src/main.py#L44"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `main`
 
@@ -23,7 +47,7 @@ Display welcome information to the user and do the operation based on the user's
 
 ---
 
-<a href="./python/src/main.py#L44"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="./python/src/main.py#L76"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `add_book`
 
@@ -31,14 +55,20 @@ Display welcome information to the user and do the operation based on the user's
 add_book()
 ```
 
-Params: none Returns: none 
-
 Take the details of the book from the user as input and add them to the library file. 
+
+
+
+**Parameters:**
+  None 
+
+**Returns:**
+  None 
 
 
 ---
 
-<a href="./python/src/main.py#L67"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="./python/src/main.py#L102"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `list_books`
 
@@ -46,14 +76,14 @@ Take the details of the book from the user as input and add them to the library 
 list_books()
 ```
 
-Params: none Returns: A pandas dataframe of the list of books in the library 
-
 Lists all the books available in the library. 
+
+Params: none Returns: A pandas dataframe of the list of books in the library 
 
 
 ---
 
-<a href="./python/src/main.py#L96"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="./python/src/main.py#L133"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `issue_book`
 
@@ -68,7 +98,7 @@ Takes the name of the book from the user as input and issue it to the user by up
 
 ---
 
-<a href="./python/src/main.py#L130"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="./python/src/main.py#L167"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `return_book`
 
