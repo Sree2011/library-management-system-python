@@ -24,7 +24,7 @@ jobs:
 
       - name: Generate documentation
         run: |
-          python src/gendoc.py
+          lazydocs python/src
 
       - name: Add untracked files
         run: |
