@@ -59,12 +59,23 @@ def append_dict_to_csv(file_path, my_dict):
         print(f"Error: {e}")
 
 def get_books(file_path):
+    """
+    Gets the list of all books in the library
+
+    Parameters:
+        file_path(str): File path of the CSV file
+
+    Returns:
+        result(numpy.ndarray): A numpy array containing the details of all books
+
+    """
     try:
         books = pd.read_csv(file_path)
-        return books.to_numpy(dtype=object)
+        result = books.to_numpy(dtype=object)
     except Exception as e:
         print(f"Error reading {file_path}: {e}")
-        return np.array([])
+        result = np.array([])
+    return result
 
 def find_book(file_path, name):
     books = get_books(file_path)
