@@ -21,7 +21,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install lazydocs numpy  # Add other required modules here
+        pip install lazydocs numpy pandas  # Add other required modules here
 
     - name: Set PYTHONPATH
       run: |
