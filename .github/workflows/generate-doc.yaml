@@ -26,9 +26,6 @@ jobs:
         run: |
           lazydocs --output-path ./docs python/src
 
-      - name: Remove __pycache__ files
-        run: |
-          find . -name "__pycache__" -exec rm -r {} +
 
       - name: Add untracked files
         run: |
