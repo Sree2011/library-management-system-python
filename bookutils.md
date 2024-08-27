@@ -63,14 +63,24 @@ This method takes the book's attributes and appends them to a CSV file,  effecti
 get_books(file_path)
 ```
 
+Gets the list of all books in the library 
 
 
 
+**Parameters:**
+ 
+ - <b>`file_path`</b> (str):  File path of the CSV file 
+
+
+
+**Returns:**
+ 
+ - <b>`result`</b> (numpy.ndarray):  A numpy array containing the details of all books 
 
 
 ---
 
-<a href="./python/src/bookutils.py#L69"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="./python/src/bookutils.py#L80"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `find_book`
 
@@ -85,7 +95,7 @@ find_book(file_path, name)
 
 ---
 
-<a href="./python/src/bookutils.py#L79"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="./python/src/bookutils.py#L90"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `update_book_status`
 
