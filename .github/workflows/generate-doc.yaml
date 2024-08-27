@@ -1,0 +1,36 @@
+name: Generate Documentation
+
+on:
+  push:
+    branches:
+      - main  # or the branch you want to trigger the action on
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.9'  # specify your Python version
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install lazydocs
+
+    - name: Generate Documentation
+      run: |
+        lazydocs python/src  # target the entire src directory
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./docs  # path to your generated docs
+        publish_branch: gh-pages  # branch to publish to
+        destination_dir: /  # publish to the root folder

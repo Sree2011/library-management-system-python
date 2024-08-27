@@ -1,8 +1,24 @@
 import bookutils
 
-'''
-Implement a book class to perform operations on the books.
-'''
+"""
+Book Module
+
+This module provides functionalities to manage a library system, including book management, tracking the issue and return of books, and updating book statuses.
+
+Classes:
+    Book: Represents a book in the library and provides methods to add, find, issue, and return books.
+
+Functions:
+    add_book(): Adds a new book to the library.
+    find_book(name): Finds a book by its title.
+    get_all_books(): Retrieves a list of all books in the library.
+    issue_book(name): Issues a book and updates its status to "Yes".
+    return_book(name): Returns a book and updates its status to "No".
+
+Modules:
+    bookutils: Utility functions for handling book data operations such as appending to CSV, finding books, and updating book status.
+"""
+
 class Book:
 
     def __init__(self, name, author, volume, issued):
@@ -10,7 +26,7 @@ class Book:
         """
     Creates the object of the Book class.
 
-    Args:
+    Parameters:
         name (str): The title of the book.
         author (str): The author of the book.
         volume (str): The volume number of the book.
@@ -28,22 +44,17 @@ class Book:
 
     def add_book(self):
         """
-        Add a new book to the library.
+       Adds the book into the library
 
-        Parameters
-        ----------
-        name : str
-            The title of the book.
-        
+       This method takes the book's attributes and appends them to a CSV file, 
+       effectively adding the book to the library's records.
 
-            
-        Returns
-        -------
-        bool
-            True if the book was added successfully, False otherwise.
-        
-        
-    """
+        Parameters:
+            None
+
+        Returns:
+            None     
+        """
         book_array = self.__dict__
         bookutils.append_dict_to_csv("./python/data/books.csv", book_array)
         print("Book Added:")
@@ -56,17 +67,11 @@ class Book:
         '''
         Finds the book by name from the library
 
-        Parameters
-        ----------
-
-        name : str
-            The title of the book
-
-            
-        Returns
-        -------
-        result : A pandas DataFrame 
-            A dataframe containing all fields of the book found
+        Parameters:
+            name (str): The title of the book to be found
+        
+        Returns:
+            result (pandas.DataFrame): A pandas dataframe containing the details of the book
 
         '''
 
@@ -77,33 +82,19 @@ class Book:
         '''
         Gets the list of all books from the library
 
-        Parameters
-        ----------
-        None
+        Parameters:
+            none
 
-        
-        Returns
-        -------
-        result : A pandas DataFrame
-            A dataframe containing all fields of all the books in the library
-
+        Returns:
+            result (pandas.DataFrame): A pandas DataFrame containing the details of all books
         '''
-        return bookutils.get_books("./python/data/books.csv")
+        result = bookutils.get_books("./python/data/books.csv")
+        return result
 
     def issue_book(self, name):
         '''
         Issues the book and updates the "issued" column to "Yes"
-
-        Parameters
-        ----------
-
-        name : str
-            The title of the book
-
-
-        Returns
-        -------
-        None
+        
 
         '''
         result = self.find_book(name)
