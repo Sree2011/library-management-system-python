@@ -3,31 +3,31 @@ BookUtils Module
 
 This module provides utility functions to manage a library system, including book management, tracking the issue and return of books, and updating book statuses.
 
-Modules:
+Modules :
 
-    csv: 
+    csv : 
         Python library for handling csv files
 
-    numpy:
+    numpy :
         Python library for data analysis
 
-    pandas:
+    pandas :
         Python library for data visualization
 
-Functions:
+Functions :
 
-    append_dict_to_csv(file_path, my_dict):
+    append_dict_to_csv(file_path, my_dict) :
         Appends the dictionary my_dict as a new row into the file path.
 
-    get_books(file_path):
+    get_books(file_path) :
         Reads all the rows from the file.
 
-    find_book(file_path, name):
+    find_book(file_path, name) :
         Searches in the file by name.
 
-    update_book_status(file_path, name, status):
+    update_book_status(file_path, name, status) :
         Updates the issued column of the name with the status.
-        
+
 """
 
 import csv
