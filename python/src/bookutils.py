@@ -1,7 +1,3 @@
-
-import csv
-import numpy as np
-import pandas as pd
 """
 BookUtils Module
 
@@ -9,16 +5,20 @@ This module provides utility functions to manage a library system, including boo
 
 
 Functions:
-    append_dict_to_csv(file_path,my_dict): Appends the dictionary my_dict as a new row into the file path
-    get_books(file_path): Reads all the rows from the file
-    find_book(file_path,name): Searches in the file by name
-    update_book_status(file_path,name,status): Updates the issued column of the name with the status
+    append_dict_to_csv(file_path,my_dict) : Appends the dictionary my_dict as a new row into the file path
+    get_books(file_path) : Reads all the rows from the file
+    find_book(file_path,name) : Searches in the file by name
+    update_book_status(file_path,name,status) : Updates the issued column of the name with the status
 
 Modules:
-    csv: Python library for handling csv files
-    numpy: Python library for data analysis
-    pandas: Python library for data visualisation
+    csv : Python library for handling csv files
+    numpy : Python library for data analysis
+    pandas : Python library for data visualisation
 """
+import csv
+import numpy as np
+import pandas as pd
+
 def append_dict_to_csv(file_path, my_dict):
     try:
         with open(file_path, 'a', newline='') as file:
