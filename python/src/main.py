@@ -43,11 +43,15 @@ import pydoc
 
 def main():
     '''
-    Params: none
-    Returns: none
-
     Display welcome information to the user and
     do the operation based on the user's preference
+
+    Parameters:
+        None
+    Returns:
+        None
+
+    
     '''
     print("Hi! Welcome to our Library Management System!")
     name_user = input("What should we call you? ")
@@ -103,9 +107,11 @@ def list_books():
 
     '''
     Lists all the books available in the library.
-    
-    Params: none
-    Returns: A pandas dataframe of the list of books in the library
+
+    Parameters: 
+        None
+    Returns:
+        list_books(pandas.DataFrame) : A pandas dataframe of the list of books in the library
 
     
     '''
@@ -133,11 +139,14 @@ def list_books():
 def issue_book():
 
     '''
-    Params: none
-    Returns: none
-
     Takes the name of the book from the user as input
     and issue it to the user by updating issued status to 'yes'.
+
+    Parameters:
+        None
+    Returns:
+        None
+
     '''
 
     # Get the list of all books and print
@@ -165,14 +174,17 @@ def issue_book():
         sample_book.issue_book(name)
 
 def return_book():
-
     '''
-    Params: none
-    Returns: none
-
     Takes the name of the book from the user as input
     and returns it to the library by updating issued status to 'no'.
+
+    Parameters:
+        None
+    Returns:
+        None
+
     '''
+    
     df = list_books()
     name = input("Enter the name of the book you want to return: ").capitalize()
     result = df[df["Name"].str.lower() == name.lower()]
@@ -185,6 +197,7 @@ def return_book():
         # Assuming issue_book method updates the book's issued status
         sample_book = book.Book(result.iloc[0]["Name"], result.iloc[0]["Author"], result.iloc[0]["Volume"], result.iloc[0]["Issued"])
         sample_book.return_book(name)
+
 
 
 if __name__ == "__main__":
