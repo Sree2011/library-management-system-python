@@ -1,7 +1,39 @@
-'''
-This is the user output for the
-library management system project
-'''
+"""
+Main Module
+
+This module provides an interactive interface to the user
+
+Modules:
+
+    book: 
+        functionalities to manage a library system, including book management, tracking the issue and return of books, and updating book statuses
+    
+    pandas:
+        Python library for data visualisation
+    
+    numpy:
+        Python library for data analysis
+
+
+Functions:
+
+    add_book(): 
+        Adds a new book to the library.
+
+    find_book(name): 
+        Finds a book by its title.
+
+    list_books(): 
+        Retrieves a list of all books in the library.
+
+    issue_book(name): 
+        Issues a book and updates its status to "Yes".
+        
+    return_book(name): 
+        Returns a book and updates its status to "No".
+
+
+"""
 import book
 import pandas as pd
 import numpy as np
@@ -43,11 +75,14 @@ def main():
 
 def add_book():
     '''
-    Params: none
-    Returns: none
-
     Take the details of the book from the user as input
     and add them to the library file.
+
+    Parameters:
+        None
+    Returns: 
+        None
+
     '''
 
     # Get the details from the user
@@ -67,10 +102,12 @@ def add_book():
 def list_books():
 
     '''
+    Lists all the books available in the library.
+    
     Params: none
     Returns: A pandas dataframe of the list of books in the library
 
-    Lists all the books available in the library.
+    
     '''
     # Create a object of Book class from book.py to activate functions
     sample_book = book.Book("nn", "88", "4th", "Yes")
