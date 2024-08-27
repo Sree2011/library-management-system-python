@@ -94,6 +94,7 @@ class Book:
     def issue_book(self, name):
         '''
         Issues the book and updates the "issued" column to "Yes"
+
         
 
         '''
