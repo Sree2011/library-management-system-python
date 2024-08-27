@@ -95,8 +95,12 @@ class Book:
         '''
         Issues the book and updates the "issued" column to "Yes"
 
+        Parameters:
+            None
         
-
+        Returns:
+            None
+        
         '''
         result = self.find_book(name)
         if result.empty:
@@ -108,6 +112,16 @@ class Book:
             print(result)
 
     def return_book(self, name):
+        '''
+        Returns the book and updates the "issued" column to "No"
+
+        Parameters:
+            None
+        
+        Returns:
+            None
+        
+        '''
         bookutils.update_book_status("./python/data/books.csv", name, "No")
         print("Book returned:")
         result = self.find_book(name)
