@@ -1,3 +1,7 @@
+
+import csv
+import numpy as np
+import pandas as pd
 """
 BookUtils Module
 
@@ -15,10 +19,6 @@ Modules:
     numpy: Python library for data analysis
     pandas: Python library for data visualisation
 """
-import csv
-import numpy as np
-import pandas as pd
-
 def append_dict_to_csv(file_path, my_dict):
     try:
         with open(file_path, 'a', newline='') as file:
