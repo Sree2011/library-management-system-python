@@ -78,6 +78,16 @@ def get_books(file_path):
     return result
 
 def find_book(file_path, name):
+    """
+    Find a book by its name
+
+    Parameters:
+        file_path(str) : File path of the CSV file
+
+    Returns:
+        result(numpy.ndarray) : A numpy array containing the details of the book found
+
+    """
     books = get_books(file_path)
     if books.size == 0:
         return pd.DataFrame(columns=["Name", "Author", "Volume", "Issued"])
@@ -88,6 +98,17 @@ def find_book(file_path, name):
     return result
 
 def update_book_status(file_path, name, status):
+    """
+    Updates the issued status of the book based on the input
+
+    Parameters:
+        file_path(str) : File path of the CSV file
+        name : Name of the book to update the status
+        status : The status to update ("Yes" or "No")
+
+    Returns:
+        None
+    """
     books = np.genfromtxt(file_path, delimiter=',', dtype=str, skip_header=1)
     name_lower = name.lower()
     positions = np.argwhere(np.char.lower(books[:, 0]) == name_lower)
