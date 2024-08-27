@@ -21,6 +21,7 @@ class Book:
     issued : str
         Issued status of the book.
 
+        
     Returns
     -------
     Book
@@ -42,6 +43,7 @@ class Book:
             The title of the book.
         
 
+            
         Returns
         -------
         bool
@@ -67,6 +69,7 @@ class Book:
         name : str
             The title of the book
 
+            
         Returns
         -------
         result : A pandas DataFrame 
@@ -85,6 +88,7 @@ class Book:
         ----------
         None
 
+        
         Returns
         -------
         result : A pandas DataFrame
@@ -102,6 +106,7 @@ class Book:
 
         name : str
             The title of the book
+            
 
         Returns
         -------
