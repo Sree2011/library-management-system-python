@@ -24,7 +24,7 @@ jobs:
 
       - name: Generate documentation
         run: |
-          pythonpython/src/gendoc.py
+          python python/src/gendoc.py
 
 
       - name: Add untracked files
