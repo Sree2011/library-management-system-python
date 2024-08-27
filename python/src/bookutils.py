@@ -35,6 +35,20 @@ import numpy as np
 import pandas as pd
 
 def append_dict_to_csv(file_path, my_dict):
+
+    """
+       Appends the book details into the books.csv file
+
+       This method takes the book's attributes and appends them to a CSV file, 
+       effectively adding the book to the library's records.
+
+        Parameters:
+            file_path(str) : File path of the CSV file
+            my_dict(dict) : Dictionary containing details of book to be added
+
+        Returns:
+            None
+    """
     try:
         with open(file_path, 'a', newline='') as file:
             fieldnames = ['name', 'author', 'volume', 'issued']
