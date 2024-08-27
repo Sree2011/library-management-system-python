@@ -36,14 +36,26 @@ Functions :
 append_dict_to_csv(file_path, my_dict)
 ```
 
+Appends the book details into the books.csv file 
+
+This method takes the book's attributes and appends them to a CSV file,  effectively adding the book to the library's records. 
 
 
 
+**Parameters:**
+ 
+  - <b>`file_path(str) `</b>:  File path of the CSV file 
+  - <b>`my_dict(dict) `</b>:  Dictionary containing details of book to be added 
+
+
+
+**Returns:**
+ None 
 
 
 ---
 
-<a href="./python/src/bookutils.py#L47"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="./python/src/bookutils.py#L61"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `get_books`
 
@@ -58,7 +70,7 @@ get_books(file_path)
 
 ---
 
-<a href="./python/src/bookutils.py#L55"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="./python/src/bookutils.py#L69"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `find_book`
 
@@ -73,7 +85,7 @@ find_book(file_path, name)
 
 ---
 
-<a href="./python/src/bookutils.py#L65"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="./python/src/bookutils.py#L79"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `update_book_status`
 
