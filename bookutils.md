@@ -88,14 +88,24 @@ Gets the list of all books in the library
 find_book(file_path, name)
 ```
 
+Find a book by its name 
 
 
 
+**Parameters:**
+ 
+ - <b>`file_path(str) `</b>:  File path of the CSV file 
+
+
+
+**Returns:**
+ 
+ - <b>`result(numpy.ndarray) `</b>:  A numpy array containing the details of the book found 
 
 
 ---
 
-<a href="./python/src/bookutils.py#L90"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="./python/src/bookutils.py#L100"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `update_book_status`
 
@@ -103,9 +113,20 @@ find_book(file_path, name)
 update_book_status(file_path, name, status)
 ```
 
+Updates the issued status of the book based on the input 
 
 
 
+**Parameters:**
+ 
+ - <b>`file_path(str) `</b>:  File path of the CSV file 
+ - <b>`name `</b>:  Name of the book to update the status 
+ - <b>`status `</b>:  The status to update ("Yes" or "No") 
+
+
+
+**Returns:**
+ None 
 
 
 
