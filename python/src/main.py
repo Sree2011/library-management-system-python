@@ -104,7 +104,7 @@ def option_non_members():
     elif option == 2:
         list_books()
 
-def option_members(option):
+def option_members():
     """
     Presents options for members to add a book, view all books, issue a book, or return a book.
 
