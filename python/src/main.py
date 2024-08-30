@@ -17,6 +17,12 @@ Modules:
 
 Functions:
 
+    option_non_members():
+        Presents options for non-members to add a book or view all books.
+
+    option_members():
+        Presents options for members to add a book, view all books, issue a book, or return a book.
+
     add_book(): 
         Adds a new book to the library.
 
