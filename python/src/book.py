@@ -31,6 +31,7 @@ Functions:
 
 """
 import bookutils
+import memberutils
 
 
 
@@ -39,19 +40,19 @@ class Book:
     def __init__(self, name, author, volume, issued):
         
         """
-    Creates the object of the Book class.
+        Creates the object of the Book class.
 
-    Parameters:
-        name (str): The title of the book.
-        author (str): The author of the book.
-        volume (str): The volume number of the book.
-        issued (str): Issued status of the book.
+        Parameters:
+            name (str): The title of the book.
+            author (str): The author of the book.
+            volume (str): The volume number of the book.
+            issued (str): Issued status of the book.
 
-    Returns:
-        Book: An object of the Book class.
-    """
-    
-    
+        Returns:
+            Book: An object of the Book class.
+        
+        """
+        
         self.name = name
         self.author = author
         self.volume = volume
@@ -106,7 +107,7 @@ class Book:
         result = bookutils.get_books("./python/data/books.csv")
         return result
 
-    def issue_book(self, name):
+    def issue_book(self, book_name,member_name):
         '''
         Issues the book and updates the "issued" column to "Yes"
 
@@ -117,14 +118,16 @@ class Book:
             None
         
         '''
-        result = self.find_book(name)
+        result = self.find_book(book_name)
         if result.empty:
             print("No books found with that name.")
         else:
-            bookutils.update_book_status("./python/data/books.csv", name, "Yes")
-            print("Book issued: ")
-            result = self.find_book(name)
-            print(result)
+            bookutils.update_book_status("./python/data/books.csv", book_name, "Yes")
+            
+            book = self.find_book(book_name)
+            member = memberutils.find_member("./python/data/members.csv",member_name)
+            memberutils.update_book_issued("./python/data/books_issued.csv",member_name,book_name)
+            print(f"Book {book} issued to {member}")
 
     def return_book(self, name):
         '''

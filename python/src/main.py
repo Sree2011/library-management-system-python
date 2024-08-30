@@ -34,7 +34,9 @@ Functions:
 
 
 """
+from datetime import datetime
 import book
+import member
 import pandas as pd
 import numpy as np
 
@@ -56,25 +58,64 @@ def main():
     print("Hi! Welcome to our Library Management System!")
     name_user = input("What should we call you? ")
     print(f"Hello, {name_user}")
+    
+    mem = member.find_member(name_user)
+
+    if len(mem) == 0:
+        print("You are not a member of our library. Would you like to be one? It's Free..Kindly type yes or no")
+        op = input()
+        if op.lower() == "yes":
+            add_member()
+
+        elif op.lower() == "no":
+            print("You can't get a book issued if you are not a member. Are u sure?")
+            op = input()
+            if op == "yes":
+                add_member()
+                option_members()
+            elif op == "no":
+                print("No worries, thank you.")
+                print("If you want to get a book issued, become a member")
+                option_non_members()
+    else:
+        option_members()
+
+    
+  
+
+def option_non_members():
+    """
+    Presents options for non-members to add a book or view all books.
+
+    Prompts the user to press 1 to add a book or press 2 to see all books.
+    Calls the appropriate function based on the user's input.
+    """
+    print("If you want to add a book, press 1")
+    print("If you want to see all books, press 2")
+    option = int(input())
+    if option == 1:
+        add_book()
+    elif option == 2:
+        list_books()
+
+def option_members(option):
+    """
+    Presents options for members to add a book, view all books, issue a book, or return a book.
+
+    Prompts the user to press 1 to add a book, press 2 to see all books, press 3 to get a book issued, or press 4 to return a book.
+    Calls the appropriate function based on the user's input.
+    """
     print("If you want to add a book, press 1")
     print("If you want to see all books, press 2")
     print("If you want to get a book issued, press 3")
     print("If you want to return a book, press 4")
-
-    # Ask for an option
-    option_book = int(input())
-
-    # Check for the functions
-    if option_book == 1:
-        add_book()
-    elif option_book == 2:
-        list_books()
-    elif option_book == 3:
+    option = int(input())
+    if option == 1 or option == 2:
+        option_non_members()
+    elif option == 3:
         issue_book()
-    elif option_book == 4:
+    elif option == 4:
         return_book()
-    else:
-        print("Invalid option. Please try again.")
 
 
 def add_book():
@@ -198,7 +239,18 @@ def return_book():
         sample_book = book.Book(result.iloc[0]["Name"], result.iloc[0]["Author"], result.iloc[0]["Volume"], result.iloc[0]["Issued"])
         sample_book.return_book(name)
 
+def add_member():
+            print("Enter your name:")
+            name = input()
+            print("Enter your email:")
+            email = input()
+            mem_date = datetime.now()
+            print("Enter your preferred membership type: free or premium")
+            print("Note, the premium subscription has no fee")
+            mem_type = input()
 
+            member1 = member.Member(name,email,mem_date,mem_type)
+            member1.add_member()
 
 if __name__ == "__main__":
     main()
