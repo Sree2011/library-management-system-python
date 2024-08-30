@@ -95,6 +95,12 @@ def option_non_members():
 
     Prompts the user to press 1 to add a book or press 2 to see all books.
     Calls the appropriate function based on the user's input.
+
+    Parameters:
+        None
+    
+    Returns:
+        None
     """
     print("If you want to add a book, press 1")
     print("If you want to see all books, press 2")
@@ -110,6 +116,12 @@ def option_members():
 
     Prompts the user to press 1 to add a book, press 2 to see all books, press 3 to get a book issued, or press 4 to return a book.
     Calls the appropriate function based on the user's input.
+
+    Parameters:
+        None
+    
+    Returns:
+        None
     """
     print("If you want to add a book, press 1")
     print("If you want to see all books, press 2")
@@ -246,17 +258,27 @@ def return_book():
         sample_book.return_book(name)
 
 def add_member():
-            print("Enter your name:")
-            name = input()
-            print("Enter your email:")
-            email = input()
-            mem_date = datetime.now()
-            print("Enter your preferred membership type: free or premium")
-            print("Note, the premium subscription has no fee")
-            mem_type = input()
+        """
+        Adds a member into the members.csv file
 
-            member1 = member.Member(name,email,mem_date,mem_type)
-            member1.add_member()
+        Parameters:
+            None
+        
+        Returns:
+            None
+        """
+        
+        print("Enter your name:")
+        name = input()
+        print("Enter your email:")
+        email = input()
+        mem_date = datetime.now()
+        print("Enter your preferred membership type: free or premium")
+        print("Note, the premium subscription has no fee")
+        mem_type = input()
+
+        member1 = member.Member(name,email,mem_date,mem_type)
+        member1.add_member()
 
 if __name__ == "__main__":
     main()
