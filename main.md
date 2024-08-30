@@ -77,7 +77,7 @@ Prompts the user to press 1 to add a book or press 2 to see all books. Calls the
 ## <kbd>function</kbd> `option_members`
 
 ```python
-option_members(option)
+option_members()
 ```
 
 Presents options for members to add a book, view all books, issue a book, or return a book. 
