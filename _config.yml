@@ -16,7 +16,7 @@ include:
   - ISSUE_TEMPLATE.md
   - PULL_REQUEST_TEMPLATE.md
 
-remote_theme: pages-themes/dinky@v0.2.0
+remote_theme: pages-themes/leap-day@v0.2.0
 
 markdown: kramdown
 kramdown:

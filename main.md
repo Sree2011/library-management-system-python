@@ -70,9 +70,19 @@ Presents options for non-members to add a book or view all books.
 Prompts the user to press 1 to add a book or press 2 to see all books. Calls the appropriate function based on the user's input. 
 
 
+
+**Parameters:**
+  None 
+
+
+
+**Returns:**
+  None 
+
+
 ---
 
-<a href="./python/src/main.py#L107"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="./python/src/main.py#L113"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `option_members`
 
@@ -85,9 +95,19 @@ Presents options for members to add a book, view all books, issue a book, or ret
 Prompts the user to press 1 to add a book, press 2 to see all books, press 3 to get a book issued, or press 4 to return a book. Calls the appropriate function based on the user's input. 
 
 
+
+**Parameters:**
+  None 
+
+
+
+**Returns:**
+  None 
+
+
 ---
 
-<a href="./python/src/main.py#L127"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="./python/src/main.py#L139"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `add_book`
 
@@ -108,7 +128,7 @@ Take the details of the book from the user as input and add them to the library 
 
 ---
 
-<a href="./python/src/main.py#L153"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="./python/src/main.py#L165"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `list_books`
 
@@ -130,7 +150,7 @@ Lists all the books available in the library.
 
 ---
 
-<a href="./python/src/main.py#L186"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="./python/src/main.py#L198"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `issue_book`
 
@@ -151,7 +171,7 @@ Takes the name of the book from the user as input and issue it to the user by up
 
 ---
 
-<a href="./python/src/main.py#L223"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="./python/src/main.py#L235"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `return_book`
 
@@ -172,7 +192,7 @@ Takes the name of the book from the user as input and returns it to the library 
 
 ---
 
-<a href="./python/src/main.py#L248"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="./python/src/main.py#L260"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `add_member`
 
@@ -180,9 +200,17 @@ Takes the name of the book from the user as input and returns it to the library 
 add_member()
 ```
 
+Adds a member into the members.csv file 
 
 
 
+**Parameters:**
+  None 
+
+
+
+**Returns:**
+  None 
 
 
 
