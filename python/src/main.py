@@ -64,10 +64,7 @@ def main():
     print(f"Hello, {name_user}")
 
     obj1 = member.Member("ll", "sak@gmail.com", datetime.now(), "Free")
-    mem_df = obj1.get_all_members()
-    #mem = mem_df[mem_df['name'].str.lower() == name_user.lower()]
-    mem = mem_df.keys()
-    print(mem)
+    mem = obj1.find_member(name_user)
 
     if not mem.empty:
         print("You are not a member of our library. Would you like to be one? It's Free..Kindly type yes or no")
