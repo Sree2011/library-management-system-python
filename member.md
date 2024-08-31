@@ -3,7 +3,7 @@
 <a href="./python/src/member.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 # <kbd>module</kbd> `member`
-Book Module 
+Member Module 
 
 This module provides functionalities to manage a library system, including member management, issuing book to a member and returning a book from member. Modules: 
 
