@@ -115,7 +115,7 @@ Finds the book by name from the library
 
 **Returns:**
  
- - <b>`result`</b> (pandas.DataFrame):  A pandas dataframe containing the details of the book 
+ - <b>`result(pandas.DataFrame) `</b>:  A pandas dataframe containing the details of the book 
 
 ---
 
@@ -138,7 +138,7 @@ Gets the list of all books from the library
 
 **Returns:**
  
- - <b>`result`</b> (pandas.DataFrame):  A pandas DataFrame containing the details of all books 
+ - <b>`result(pandas.DataFrame) `</b>:  A pandas DataFrame containing the details of all books 
 
 ---
 
