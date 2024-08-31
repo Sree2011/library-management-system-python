@@ -87,7 +87,7 @@ class Book:
             name (str): The title of the book to be found
         
         Returns:
-            result(pandas.DataFrame): A pandas dataframe containing the details of the book
+            result(pandas.DataFrame) : A pandas dataframe containing the details of the book
 
         '''
 
@@ -102,7 +102,7 @@ class Book:
             none
 
         Returns:
-            result(pandas.DataFrame): A pandas DataFrame containing the details of all books
+            result(pandas.DataFrame) : A pandas DataFrame containing the details of all books
         '''
         result = bookutils.get_books("./python/data/books.csv")
         return result
