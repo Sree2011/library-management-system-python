@@ -164,7 +164,7 @@ Issues the book and updates the "issued" column to "Yes"
 
 ---
 
-<a href="./python/src/book.py#L132"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="./python/src/book.py#L129"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `Book.return_book`
 
