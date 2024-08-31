@@ -147,7 +147,7 @@ Gets the list of all books from the library
 ### <kbd>method</kbd> `Book.issue_book`
 
 ```python
-issue_book(book_name, member_name)
+issue_book(book_name)
 ```
 
 Issues the book and updates the "issued" column to "Yes" 
