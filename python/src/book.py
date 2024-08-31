@@ -107,7 +107,7 @@ class Book:
         result = bookutils.get_books("./python/data/books.csv")
         return result
 
-    def issue_book(self, book_name,member_name):
+    def issue_book(self, book_name):
         '''
         Issues the book and updates the "issued" column to "Yes"
 

@@ -103,8 +103,8 @@ def update_book_status(file_path, name, status):
 
     Parameters:
         file_path(str) : File path of the CSV file
-        name : Name of the book to update the status
-        status : The status to update ("Yes" or "No")
+        name(str) : Name of the book to update the status
+        status(str) : The status to update ("Yes" or "No")
 
     Returns:
         None
