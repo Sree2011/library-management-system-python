@@ -1,5 +1,5 @@
 """
-Book Module
+Member Module
 
 This module provides functionalities to manage a library system, including member management, issuing book to a member and returning a book from member.
 Modules:
@@ -26,7 +26,7 @@ Functions:
 """
 
 import memberutils
-from datetime import datetime
+#from datetime import datetime
 class Member:
     def __init__(self,name,email,member_date,member_type):
         self.id = memberutils.generate_unique_random_string(10)
