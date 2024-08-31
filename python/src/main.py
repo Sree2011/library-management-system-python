@@ -58,24 +58,26 @@ def main():
         None
     Returns:
         None
-
-    
     '''
     print("Hi! Welcome to our Library Management System!")
     name_user = input("What should we call you? ")
     print(f"Hello, {name_user}")
-    
-    mem = member.find_member(name_user)
 
-    if len(mem) == 0:
+    obj1 = member.Member("ll", "sak@gmail.com", datetime.now(), "Free")
+    mem_df = obj1.get_all_members()
+    #mem = mem_df[mem_df['name'].str.lower() == name_user.lower()]
+    mem = mem_df.keys()
+    print(mem)
+
+    if not mem.empty:
         print("You are not a member of our library. Would you like to be one? It's Free..Kindly type yes or no")
-        op = input()
-        if op.lower() == "yes":
+        op = input().lower()
+        if op == "yes":
             add_member()
-
-        elif op.lower() == "no":
-            print("You can't get a book issued if you are not a member. Are u sure?")
-            op = input()
+            option_members()
+        elif op == "no":
+            print("You can't get a book issued if you are not a member. Are you sure?")
+            op = input().lower()
             if op == "yes":
                 add_member()
                 option_members()
@@ -85,9 +87,6 @@ def main():
                 option_non_members()
     else:
         option_members()
-
-    
-  
 
 def option_non_members():
     """
@@ -128,8 +127,10 @@ def option_members():
     print("If you want to get a book issued, press 3")
     print("If you want to return a book, press 4")
     option = int(input())
-    if option == 1 or option == 2:
-        option_non_members()
+    if option == 1:
+        add_book()
+    elif option == 2:
+        list_books()
     elif option == 3:
         issue_book()
     elif option == 4:
@@ -269,13 +270,13 @@ def add_member():
         """
         
         print("Enter your name:")
-        name = input()
+        name = input().capitalize()
         print("Enter your email:")
         email = input()
         mem_date = datetime.now()
         print("Enter your preferred membership type: free or premium")
         print("Note, the premium subscription has no fee")
-        mem_type = input()
+        mem_type = input().capitalize()
 
         member1 = member.Member(name,email,mem_date,mem_type)
         member1.add_member()

@@ -102,5 +102,9 @@ def update_book_issued(file_path, member_name, book_name):
             print(f"List appended to {file_path} successfully.")
     except Exception as e:
         print(f"Error: {e}") 
-e = find_member("./python/data/members.csv","Potter")
-print(e,type(e))
+
+
+
+mem = pd.DataFrame(pd.read_csv("./python/data/members.csv"))
+
+print(mem.keys)

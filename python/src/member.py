@@ -24,7 +24,7 @@ Functions:
         Delete a member
 
 """
-
+import pandas
 import memberutils
 #from datetime import datetime
 class Member:
@@ -46,12 +46,27 @@ class Member:
             None
         """
         book_array = self.__dict__
-        memberutils.append_dict_to_csv("./python/data/members.csv", book_array)
+        memberutils.append_member_to_csv("./python/data/members.csv", book_array)
         print("Member Added:")
         print(f"Name: {self.name}")
         print(f"Email: {self.email}")
         print(f"Added on: {self.member_date}")
         print(f"Membership Type: {self.member_type}")
+
+
+    def get_all_members(self):
+        """
+        Gets the list of all members in the library as a pandas dataframe
+
+        Parameters:
+            None
+
+        Returns:
+            dh(pandas.DataFrame) : A dataframe containing the details of all members
+        """
+        result = memberutils.get_members("./python/data/members.csv")
+        dh = pandas.DataFrame(result)
+        return dh
 
     def issue_book(self,name):
         pass
