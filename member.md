@@ -74,7 +74,7 @@ Adds a member to the library
 
 ---
 
-<a href="./python/src/member.py#L59"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="./python/src/member.py#L74"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `Member.find_member`
 
@@ -88,7 +88,30 @@ find_member(name)
 
 ---
 
-<a href="./python/src/member.py#L56"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="./python/src/member.py#L57"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+
+### <kbd>method</kbd> `Member.get_all_members`
+
+```python
+get_all_members()
+```
+
+Gets the list of all members in the library as a pandas dataframe 
+
+
+
+**Parameters:**
+  None 
+
+
+
+**Returns:**
+ 
+ - <b>`dh(pandas.DataFrame) `</b>:  A dataframe containing the details of all members 
+
+---
+
+<a href="./python/src/member.py#L71"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `Member.issue_book`
 
