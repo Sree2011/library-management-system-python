@@ -40,14 +40,11 @@ Functions:
 
 
 """
-from datetime import datetime
 import book
-import member
 import pandas as pd
 import numpy as np
 
-# Generate documentation
-import pydoc
+
 
 def main():
     '''
@@ -63,62 +60,6 @@ def main():
     name_user = input("What should we call you? ")
     print(f"Hello, {name_user}")
 
-    obj1 = member.Member("ll", "sak@gmail.com", datetime.now(), "Free")
-    mem = obj1.find_member(name_user)
-
-    if not mem.empty:
-        print("You are not a member of our library. Would you like to be one? It's Free..Kindly type yes or no")
-        op = input().lower()
-        if op == "yes":
-            add_member()
-            option_members()
-        elif op == "no":
-            print("You can't get a book issued if you are not a member. Are you sure?")
-            op = input().lower()
-            if op == "yes":
-                add_member()
-                option_members()
-            elif op == "no":
-                print("No worries, thank you.")
-                print("If you want to get a book issued, become a member")
-                option_non_members()
-    else:
-        option_members()
-
-def option_non_members():
-    """
-    Presents options for non-members to add a book or view all books.
-
-    Prompts the user to press 1 to add a book or press 2 to see all books.
-    Calls the appropriate function based on the user's input.
-
-    Parameters:
-        None
-    
-    Returns:
-        None
-    """
-    print("If you want to add a book, press 1")
-    print("If you want to see all books, press 2")
-    option = int(input())
-    if option == 1:
-        add_book()
-    elif option == 2:
-        list_books()
-
-def option_members():
-    """
-    Presents options for members to add a book, view all books, issue a book, or return a book.
-
-    Prompts the user to press 1 to add a book, press 2 to see all books, press 3 to get a book issued, or press 4 to return a book.
-    Calls the appropriate function based on the user's input.
-
-    Parameters:
-        None
-    
-    Returns:
-        None
-    """
     print("If you want to add a book, press 1")
     print("If you want to see all books, press 2")
     print("If you want to get a book issued, press 3")
@@ -254,29 +195,6 @@ def return_book():
         # Assuming issue_book method updates the book's issued status
         sample_book = book.Book(result.iloc[0]["Name"], result.iloc[0]["Author"], result.iloc[0]["Volume"], result.iloc[0]["Issued"])
         sample_book.return_book(name)
-
-def add_member():
-        """
-        Adds a member into the members.csv file
-
-        Parameters:
-            None
-        
-        Returns:
-            None
-        """
-        
-        print("Enter your name:")
-        name = input().capitalize()
-        print("Enter your email:")
-        email = input()
-        mem_date = datetime.now()
-        print("Enter your preferred membership type: free or premium")
-        print("Note, the premium subscription has no fee")
-        mem_type = input().capitalize()
-
-        member1 = member.Member(name,email,mem_date,mem_type)
-        member1.add_member()
 
 if __name__ == "__main__":
     main()

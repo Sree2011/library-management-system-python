@@ -31,7 +31,7 @@ Functions:
 
 """
 import bookutils
-import memberutils
+
 
 
 
@@ -123,11 +123,8 @@ class Book:
             print("No books found with that name.")
         else:
             bookutils.update_book_status("./python/data/books.csv", book_name, "Yes")
-            
             book = self.find_book(book_name)
-            member = memberutils.find_member("./python/data/members.csv",member_name)
-            memberutils.update_book_issued("./python/data/books_issued.csv",member_name,book_name)
-            print(f"Book {book} issued to {member}")
+            print(f"Book issued: {book}")
 
     def return_book(self, name):
         '''
