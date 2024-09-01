@@ -120,8 +120,8 @@ Updates the issued status of the book based on the input
 **Parameters:**
  
  - <b>`file_path(str) `</b>:  File path of the CSV file 
- - <b>`name `</b>:  Name of the book to update the status 
- - <b>`status `</b>:  The status to update ("Yes" or "No") 
+ - <b>`name(str) `</b>:  Name of the book to update the status 
+ - <b>`status(str) `</b>:  The status to update ("Yes" or "No") 
 
 
 

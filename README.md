@@ -1,11 +1,10 @@
 # Library Management System
 
 ## Project Overview
-The Library Management System is a console-based application designed to manage the operations of a library. It allows users to manage books and members, track the issue and return of books, and calculate fines for overdue books. This project is implemented in three different programming languages: C, Java, and Python.
+The Library Management System is a console-based application designed to manage the book operations of a library. It allows users to add books, track the issue and return of books. This project is implemented in three different programming languages: C, Java, and Python. This is the Python version.
 
 ## Features
 - **Book Management:** Add, search for, issue, and return books.
-- **Member Management:** Add, delete, update, and search for members.
 
 ## File Structure
 
