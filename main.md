@@ -19,10 +19,6 @@ Modules:
 
 Functions: 
 
- option_non_members():  Presents options for non-members to add a book or view all books. 
-
- option_members():  Presents options for members to add a book, view all books, issue a book, or return a book. 
-
  add_book():   Adds a new book to the library. 
 
  find_book(name):   Finds a book by its title. 
@@ -36,7 +32,7 @@ Functions:
 
 ---
 
-<a href="./python/src/main.py#L49"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="./python/src/main.py#L43"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `main`
 
@@ -57,7 +53,7 @@ Display welcome information to the user and do the operation based on the user's
 
 ---
 
-<a href="./python/src/main.py#L78"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="./python/src/main.py#L72"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `add_book`
 
@@ -78,7 +74,7 @@ Take the details of the book from the user as input and add them to the library 
 
 ---
 
-<a href="./python/src/main.py#L104"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="./python/src/main.py#L98"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `list_books`
 
@@ -100,7 +96,7 @@ Lists all the books available in the library.
 
 ---
 
-<a href="./python/src/main.py#L137"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="./python/src/main.py#L131"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `issue_book`
 
@@ -121,7 +117,7 @@ Takes the name of the book from the user as input and issue it to the user by up
 
 ---
 
-<a href="./python/src/main.py#L174"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="./python/src/main.py#L168"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `return_book`
 
