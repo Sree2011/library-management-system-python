@@ -1,3 +1,6 @@
+title: Library Book Management System - Python
+description: This is the python implementation for my Library Book Management System Project
+
 plugins:
   - jekyll-relative-links
   - jekyll-remote-theme
